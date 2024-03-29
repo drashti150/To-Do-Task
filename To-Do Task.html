@@ -17,6 +17,9 @@
 
 <body>
 
+    <button class="logOutbtn" id="logOutbtn" onclick="logout()">Log Out</button>
+    <button class="changepass" onclick="password()">Change Password</button>
+    
     <div class="searchbar">
         <div style="text-align: center;">
             <input type="search" id="myInput" value="" placeholder="Add task">
@@ -24,11 +27,34 @@
             <p id="demo"></p>
         </div>
     </div>
+    </div>
 
     <div class="todo-section" id="todoSection"
         style="display: flex;flex-wrap: wrap;flex-direction: row;justify-content: center;">
     </div>
    
+    <div class="form-popup" id="myForm">
+  
+      <div class="box">
+        <label for="password"><b>Current Password</b></label>
+        <input type="password" id="curpass"  placeholder="Enter Current Password" required>
+        <div id="error1"></div>
+
+        <label for="password"><b>New password</b></label>
+        <input type="password" id="newpass"  placeholder="Enter New Password" required>
+        <div id="error2"></div>
+
+        <label for="password"><b>Confirm New password</b></label>
+        <input type="password" id="confpass"  placeholder="Enter Confirm Password" required>
+        <div id="error3"></div>
+
+        
+        <button type="submit" class="btn" id="submitMsg" onclick="changepass()">Change</button>
+    
+        <!-- <input type="submit" value="Change" id="submitMsg" onclick="changepass()"> -->
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="To-Do Task.js"></script>
 </body>

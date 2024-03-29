@@ -103,8 +103,8 @@ function logout() {
 }
 
 function navigateTologgedIn() {
-  let domain = window.location.href.split("/").slice(0, 5).join("/");
-  location.replace(`${domain}/weblive1.html`);
+  let domain = window.location.href.split("/").slice(0, 4).join("/");
+  location.replace(`${domain}/login.html`);
 }
 
 function password() {
@@ -164,7 +164,7 @@ function changepass() {
     }
     alert("Password changed successfully!");
     $("#signPassword").attr("onclick", `editSubmit('${userId}')`);
-    window.location.href = "weblive1.html";
+    window.location.href = "login.html";
   }
 
   function getCurrentUser() {
